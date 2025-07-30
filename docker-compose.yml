@@ -1,12 +1,11 @@
 services:
   mysql:
     image: mysql:9.4
-    platform: linux/amd64
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: user
       MYSQL_PASSWORD: pass
-      # MYSQL_DATABASE: main
+      MYSQL_DATABASE: crm
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
@@ -15,7 +14,6 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2
-    platform: linux/amd64
     environment:
       PMA_HOST: mysql
       PMA_USER: root
