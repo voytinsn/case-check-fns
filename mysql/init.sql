@@ -31,7 +31,7 @@ CREATE TABLE `clients` (
   `id` int NOT NULL,
   `company_name` text COLLATE utf8mb4_general_ci NOT NULL,
   `adress` text COLLATE utf8mb4_general_ci,
-  `inn` varchar(12) COLLATE utf8mb4_general_ci NOT NULL,
+  `inn` int NOT NULL,
   `okved` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `director` text COLLATE utf8mb4_general_ci,
   `director_function` text COLLATE utf8mb4_general_ci,
